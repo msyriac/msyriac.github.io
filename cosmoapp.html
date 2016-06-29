@@ -71,7 +71,7 @@
       var omegaR0=9.2e-5;
 
 
-      var H100 = 3.241E-18;  // 100 km/s/megaparsec in 1/s
+      var H100 = 3.241e-18;  // 100 km/s/megaparsec in 1/s
       var H0 = h*H100;
       var lamrange = Math.pow(H0/Hz(z),2.)*omegaV0
       var matrange = Math.pow(H0/Hz(z),2.)*omegaM0*Math.pow(1.+z,3.0)
@@ -93,7 +93,7 @@
       var omegaR0=9.2e-5;
 
 
-      var H100 = 3.241E-18;  // 100 km/s/megaparsec in 1/s
+      var H100 = 3.241e-18;  // 100 km/s/megaparsec in 1/s
       var H0 = h*H100;
       var ez = omegaR0*(Math.pow((1.0+z),4.0))+omegaM0*(Math.pow((1.0+z),3.0))+omegaV0;
       return H0*Math.sqrt(ez);
