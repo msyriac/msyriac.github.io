@@ -74,9 +74,9 @@
 
       var H100 = 3.241e-18;  // 100 km/s/megaparsec in 1/s
       var H0 = h*H100;
-      var lamrange = Math.pow(H0/Hz(z),2.)*omegaV0
-      var matrange = Math.pow(H0/Hz(z),2.)*omegaM0*Math.pow(1.+z,3.0)
-      var radrange = Math.pow(H0/Hz(z),2.)*omegaR0*Math.pow(1.+z,4.0)
+      var lamrange = Math.pow(H0/Hz(z),2.)*omegaV0*100.
+      var matrange = Math.pow(H0/Hz(z),2.)*omegaM0*Math.pow(1.+z,3.0)*100.
+      var radrange = Math.pow(H0/Hz(z),2.)*omegaR0*Math.pow(1.+z,4.0)*100.
       
       
       document.getElementById("zrange").innerHTML="z = " + z;
@@ -84,7 +84,7 @@
       document.getElementById("Mlab").innerHTML="omegaM = " + matrange;
       document.getElementById("Rlab").innerHTML="omegaR = " + radrange;
       //document.getElementById("trange").innerHTML="t = " + newValue;
-      rChart(lamrange*100.,matrange*100.,radrange*100.)
+      rChart(lamrange,matrange,radrange)
       }
 
       function Hz(inpZ)
@@ -127,13 +127,13 @@
       indexLabelFontColor: "MistyRose",
       indexLabelLineColor: "darkgrey",
       indexLabelPlacement: "inside",
-      toolTipContent: "{name}: {y}hrs",
+      toolTipContent: "{name}: {y}%",
       showInLegend: true,
       indexLabel: "#percent%",
       dataPoints: [
-      {  y: parseInt(V), name: "Vacuum", legendMarkerType: "triangle"},
-      {  y: parseInt(M), name: "Matter", legendMarkerType: "square"},
-      {  y: parseInt(R), name: "Radiation", legendMarkerType: "circle"}
+      {  y: parseFloat(V), name: "Vacuum", legendMarkerType: "triangle"},
+      {  y: parseFloat(M), name: "Matter", legendMarkerType: "square"},
+      {  y: parseFloat(R), name: "Radiation", legendMarkerType: "circle"}
       ]
       }
       ]
