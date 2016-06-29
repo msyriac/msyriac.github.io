@@ -61,15 +61,26 @@
 	<input type="range" min="0" max="1000" value="0" step="1" onchange="showValue(this.value)"  />
 	<span id="zrange">z = 0</span>
     <script type="text/javascript">
-      function showValue(newValue)
+      function showValue(z)
       {
 
+      
+      var omegaM0=0.315;
+      var omegaV0=0.685;
+      var omegaR0=9.2e-5;
+
+
+      var H100 = 3.241E-18;  // 100 km/s/megaparsec in 1/s
+      var H0 = h*H100;
       var lamrange = Math.pow(H0/Hz(z),2.)*omegaV0
       var matrange = Math.pow(H0/Hz(z),2.)*omegaM0*Math.pow(1.+zrange,3.0)
       var radrange = Math.pow(H0/Hz(z),2.)*omegaR0*Math.pow(1.+zrange,4.0)
       
       
-      document.getElementById("zrange").innerHTML="z = " + Hz(newValue);
+      document.getElementById("zrange").innerHTML="z = " + z;
+      document.getElementById("Vlab").innerHTML="omegaV = " + lamrange;
+      document.getElementById("Mlab").innerHTML="omegaM = " + matrange;
+      document.getElementById("Rlab").innerHTML="omegaR = " + radrange;
       //document.getElementById("trange").innerHTML="t = " + newValue;
       }
 
@@ -93,6 +104,15 @@
     <!--input type="range" min="0" max="13.e9" value="13.e9" step="5.e8" onchange="showValue(this.value)"  />
     <span id="trange">t = 0</span-->
       </p>
+      <p>
+	<span id="Vlab">omegaV = 0</span-->
+				  </p>
+      <p>
+	<span id="Mlab">omegaM = 0</span-->
+				  </p>
+      <p>
+	<span id="Rlab">omegaR = 0</span-->
+				  </p>
     </div>	
   </body>
 </html>
