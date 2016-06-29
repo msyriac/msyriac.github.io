@@ -74,8 +74,8 @@
       var H100 = 3.241E-18;  // 100 km/s/megaparsec in 1/s
       var H0 = h*H100;
       var lamrange = Math.pow(H0/Hz(z),2.)*omegaV0
-      var matrange = Math.pow(H0/Hz(z),2.)*omegaM0*Math.pow(1.+zrange,3.0)
-      var radrange = Math.pow(H0/Hz(z),2.)*omegaR0*Math.pow(1.+zrange,4.0)
+      var matrange = Math.pow(H0/Hz(z),2.)*omegaM0*Math.pow(1.+z,3.0)
+      var radrange = Math.pow(H0/Hz(z),2.)*omegaR0*Math.pow(1.+z,4.0)
       
       
       document.getElementById("zrange").innerHTML="z = " + z;
