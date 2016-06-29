@@ -95,8 +95,10 @@
 
       var H100 = 3.241e-18;  // 100 km/s/megaparsec in 1/s
       var H0 = h*H100;
-      var ez = omegaR0*(Math.pow((1.0+z),4.0))+omegaM0*(Math.pow((1.0+z),3.0))+omegaV0;
-      document.getElementById("zrange").innerHTML="z = " + Math.sqrt(ez);
+      var ez = omegaR0*(Math.pow(1.0+z,4.0))+omegaM0*(Math.pow(1.0+z,3.0))+omegaV0;
+      var v1 = omegaV0+omegaM0;
+      document.getElementById("zrange").innerHTML="z = " + v1;
+      //document.getElementById("zrange").innerHTML="z = " + Math.sqrt(ez);
       
       return H0*Math.sqrt(ez);
       }
