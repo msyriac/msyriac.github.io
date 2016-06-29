@@ -61,6 +61,26 @@
       <p>
 	<input type="range" min="0" max="1000" value="0" step="1" oninput="showValue(this.value)"  />
 	<span id="zrange">z = 0</span>
+      </p>
+      <p>
+    <!--input type="range" min="0" max="13.e9" value="13.e9" step="5.e8" onchange="showValue(this.value)"  />
+    <span id="trange">t = 0</span-->
+      </p>
+      <p>
+	<span id="Vlab">omegaV = 0</span-->
+				  </p>
+      <p>
+	<span id="Mlab">omegaM = 0</span-->
+				  </p>
+      <p>
+	<span id="Rlab">omegaR = 0</span-->
+				     </p>
+      <p>
+
+      <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+				     </p>
+    </div>
+
     <script type="text/javascript">
       function showValue(inpZ)
       {
@@ -144,24 +164,7 @@
       window.onload = showValue(0);
       
       </script>
-      </p>
-      <p>
-    <!--input type="range" min="0" max="13.e9" value="13.e9" step="5.e8" onchange="showValue(this.value)"  />
-    <span id="trange">t = 0</span-->
-      </p>
-      <p>
-	<span id="Vlab">omegaV = 0</span-->
-				  </p>
-      <p>
-	<span id="Mlab">omegaM = 0</span-->
-				  </p>
-      <p>
-	<span id="Rlab">omegaR = 0</span-->
-				     </p>
-      <p>
 
-      <div id="chartContainer" style="height: 300px; width: 100%;"></div>
-				     </p>
-    </div>	
+    
   </body>
 </html>
