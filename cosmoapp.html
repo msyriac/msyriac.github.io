@@ -63,8 +63,14 @@
     <script type="text/javascript">
       function showValue(newValue)
       {
+
+      var lamrange = Math.pow(H0/Hz(z),2.)*omegaV0
+      var matrange = Math.pow(H0/Hz(z),2.)*omegaM0*Math.pow(1.+zrange,3.0)
+      var radrange = Math.pow(H0/Hz(z),2.)*omegaR0*Math.pow(1.+zrange,4.0)
+      
+      
       document.getElementById("zrange").innerHTML="z = " + Hz(newValue);
-      document.getElementById("trange").innerHTML="t = " + newValue;
+      //document.getElementById("trange").innerHTML="t = " + newValue;
       }
 
       function Hz(z)
@@ -84,8 +90,8 @@
       </script>
       </p>
       <p>
-    <input type="range" min="0" max="13.e9" value="13.e9" step="5.e8" onchange="showValue(this.value)"  />
-    <span id="trange">t = 0</span>
+    <!--input type="range" min="0" max="13.e9" value="13.e9" step="5.e8" onchange="showValue(this.value)"  />
+    <span id="trange">t = 0</span-->
       </p>
     </div>	
   </body>
