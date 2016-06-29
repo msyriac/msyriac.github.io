@@ -49,7 +49,7 @@
       }
 
     </style>
-      }
+     
 
   </head>
 
@@ -58,14 +58,16 @@
       <h1>Cosmic Densities</h1>
 
       <p>
-	<input type="range" min="0" max="1000" value="0" step="1"" onchange="showValue(this.value)"  />
-	<span id="range">0</span>
+	<input type="range" min="0" max="1000" value="0" step="1" onchange="showValue(this.value)"  />
+	<span id="zrange">0</span>
     <script type="text/javascript">
       function showValue(newValue)
       {
-      document.getElementById("range").innerHTML=newValue;
+      document.getElementById("zrange").innerHTML=newValue;
       }
       </script>
+    <input type="range" min="0" max="1000" value="0" step="1" onchange="showValue(this.value)"  />
+    <span id="trange">0</span>
       </p>
     </div>	
   </body>
