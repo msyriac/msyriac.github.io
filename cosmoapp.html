@@ -61,10 +61,10 @@
 	<input type="range" min="0" max="1000" value="0" step="1" onchange="showValue(this.value)"  />
 	<span id="zrange">z = 0</span>
     <script type="text/javascript">
-      function showValue(z)
+      function showValue(inpZ)
       {
 
-      
+      var z = parseFloat(inpZ)
       var h=0.7;
       var omegaM0=0.315;
       var omegaV0=0.685;
@@ -85,8 +85,9 @@
       //document.getElementById("trange").innerHTML="t = " + newValue;
       }
 
-      function Hz(z)
+      function Hz(inpZ)
       {
+      var z = parseFloat(inpZ)
       var h=0.7;
       var omegaM0=0.315;
       var omegaV0=0.685;
