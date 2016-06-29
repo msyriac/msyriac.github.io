@@ -77,7 +77,7 @@
 
       var H100 = 3.241E-18;  // 100 km/s/megaparsec in 1/s
       var H0 = h*H100;
-      var ez=omegaR0*((1.+z)**4.)+omegaM0*((1.+z)**3.)+omegaV0;
+      var ez = omegaR0*((1.0+z)**4.0)+omegaM0*((1.0+z)**3.0)+omegaV0;
       return H0*Math.sqrt(ez);
       }
       
