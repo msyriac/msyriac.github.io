@@ -78,7 +78,7 @@
       var radrange = Math.pow(H0/Hz(z),2.)*omegaR0*Math.pow(1.+z,4.0)
       
       
-      document.getElementById("zrange").innerHTML="z = " + Math.pow(H0/Hz(z),2.);
+      //document.getElementById("zrange").innerHTML="z = " + Math.pow(H0/Hz(z),2.);
       document.getElementById("Vlab").innerHTML="omegaV = " + lamrange;
       document.getElementById("Mlab").innerHTML="omegaM = " + matrange;
       document.getElementById("Rlab").innerHTML="omegaR = " + radrange;
@@ -96,6 +96,8 @@
       var H100 = 3.241e-18;  // 100 km/s/megaparsec in 1/s
       var H0 = h*H100;
       var ez = omegaR0*(Math.pow((1.0+z),4.0))+omegaM0*(Math.pow((1.0+z),3.0))+omegaV0;
+      document.getElementById("zrange").innerHTML="z = " + Math.sqrt(ez);
+      
       return H0*Math.sqrt(ez);
       }
       
