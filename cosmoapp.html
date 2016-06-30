@@ -51,6 +51,17 @@
 
     </style>
      
+    <script type="text/javascript">
+      <!--
+    function toggle_visibility(id) {
+       var e = document.getElementById(id);
+       if(e.style.display == 'block')
+          e.style.display = 'none';
+       else
+          e.style.display = 'block';
+    }
+    //-->
+    </script>
     
   </head>
 
@@ -58,9 +69,14 @@
     <div class="container">
       <h1>Cosmic Densities</h1>
       <h3>
-	<a>[+] What is this?</a>
+	<a href="#" onclick="toggle_visibility('myDescription');">[+] What is this?</a>
+      </h3>
+      
+      <h3 id="myDescription">
+	Blah Blah
       </h3>
 
+      
       <p>
 	<input type="range" min="0" max="10000" value="0" step="any" oninput="showValue(this.value,'zval')" id="zInput"  />
 	<span align="center" id="zrange">z = 0</span>
