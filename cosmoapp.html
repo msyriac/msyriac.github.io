@@ -59,11 +59,11 @@
       <h1>Cosmic Densities</h1>
 
       <p>
-	<input type="range" min="0" max="10000" value="0" step="1" oninput="showValue(this.value,'zval')" name="zInput"  />
+	<input type="range" min="0" max="10000" value="0" step="1" oninput="showValue(this.value,'zval')" id="zInput"  />
 	<span id="zrange">z = 0</span>
       </p>
       <p>
-    <input type="range" min="6300" max="13.e9" value="13.e9" step="5.e8" oninput="showValue(this.value,'tval')" name="tInput" />
+    <input type="range" min="6300" max="13.e9" value="13.e9" step="5.e8" oninput="showValue(this.value,'tval')" id="tInput" />
       </p>
       <p>
 	    <span id="trange">t = 0</span>
@@ -92,13 +92,13 @@
       {
       var z = parseFloat(inp)
       var T = TfromZ(z)
-      tInput.value = T
+      document.getElementById("tInput").value = T
       }
       else
       {
       var T = parseFloat(inp)
       var z = ZfromT(T)
-      zInput.value = z
+      document.getElementById("zInput").value = z
       
       }
       document.getElementById("zrange").innerHTML="z = " + z;
