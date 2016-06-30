@@ -85,7 +85,6 @@
       var Tval = TfromZ(z)
       var tslider =  document.getElementById("tInput")
       tslider.value = parseFloat(Tval)
-      console.log(Tval)
       }
       else
       {
@@ -93,11 +92,10 @@
       var z = ZfromT(Tval)
       var zslider = document.getElementById("zInput")
       zslider.value = parseFloat(z)
-      //console.log(z)
       
       }
       document.getElementById("zrange").innerHTML="z = " + z;
-      document.getElementById("trange").innerHTML="t = " + Tval.toExponential() + " years";
+      document.getElementById("trange").innerHTML="t = " + Tval.toExponential(2) + " years";
 
       var h=0.7;
       var omegaM0=0.315;
