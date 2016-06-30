@@ -82,22 +82,22 @@
       if (fromWhom=="zval")
       {
       var z = parseFloat(inp)
-      var T = TfromZ(z)
+      var Tval = TfromZ(z)
       var tslider =  document.getElementById("tInput")
-      tslider.value = T
-      console.log(T)
+      tslider.value = Tval
+      //console.log(T)
       }
       else
       {
-      var T = parseFloat(inp)
-      var z = ZfromT(T)
+      var Tval = parseFloat(inp)
+      var z = ZfromT(Tval)
       var zslider = document.getElementById("zInput")
       zslider.value = z
-      console.log(z)
+      //console.log(z)
       
       }
       document.getElementById("zrange").innerHTML="z = " + z;
-      document.getElementById("trange").innerHTML="t = " + T;
+      document.getElementById("trange").innerHTML="t = " + Tval;
 
       var h=0.7;
       var omegaM0=0.315;
