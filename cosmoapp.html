@@ -53,12 +53,15 @@
      
     <script type="text/javascript">
       <!--
-    function toggle_visibility(id) {
-       var e = document.getElementById(id);
+    function toggle_visibility() {
+       var e = document.getElementById('myDescription');
+       var t = document.getElementById('toggleText');
        if(e.style.display == 'block')
           e.style.display = 'none';
+	  t.innerHTML = "[-] What is this?"
        else
           e.style.display = 'block';
+	  t.innerHTML = "[+] What is this?"
     }
     //-->
     </script>
@@ -69,10 +72,10 @@
     <div class="container">
       <h1>Cosmic Densities</h1>
       <h3>
-	<a href="#" onclick="toggle_visibility('myDescription');">[+] What is this?</a>
+	<a href="#" onclick="toggle_visibility();" id="toggleText">[+] What is this?</a>
       </h3>
       
-      <h3 id="myDescription">
+      <h3 id="myDescription" style="display: block;">
 	Blah Blah
       </h3>
 
