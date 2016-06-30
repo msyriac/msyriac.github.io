@@ -84,7 +84,7 @@
       var z = parseFloat(inp)
       var Tval = TfromZ(z)
       var tslider =  document.getElementById("tInput")
-      tslider.value = Tval
+      tslider.value = parseFloat(Tval)
       console.log(Tval)
       }
       else
@@ -92,12 +92,12 @@
       var Tval = parseFloat(inp)
       var z = ZfromT(Tval)
       var zslider = document.getElementById("zInput")
-      zslider.value = z
+      zslider.value = parseFloat(z)
       //console.log(z)
       
       }
       document.getElementById("zrange").innerHTML="z = " + z;
-      //document.getElementById("trange").innerHTML="t = " + Tval;
+      document.getElementById("trange").innerHTML="t = " + Tval;
 
       var h=0.7;
       var omegaM0=0.315;
