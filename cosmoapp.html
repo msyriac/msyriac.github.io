@@ -69,15 +69,6 @@
 	    <span id="trange">t = 0</span>
 
       </p>
-      <!--p>
-	<span id="Vlab">omegaV = 0</span>
-				  </p>
-      <p>
-	<span id="Mlab">omegaM = 0</span>
-				  </p>
-      <p>
-	<span id="Rlab">omegaR = 0</span>
-				     </p-->
       <p>
 
       <div id="chartContainer" style="height: 300px; width: 100%;"></div>
@@ -92,13 +83,15 @@
       {
       var z = parseFloat(inp)
       var T = TfromZ(z)
-      document.getElementById("tInput").value = T
+      var tslide =  document.getElementById("tInput")
+      tslider.value = T
       }
       else
       {
       var T = parseFloat(inp)
       var z = ZfromT(T)
-      document.getElementById("zInput").value = z
+      var zslider = document.getElementById("zInput")
+      zslider.value = z
       
       }
       document.getElementById("zrange").innerHTML="z = " + z;
