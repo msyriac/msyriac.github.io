@@ -62,9 +62,12 @@
 	<input type="range" min="0" max="10000" value="0" step="1" oninput="showValue(this.value)"  />
 	<span id="zrange">z = 0</span>
       </p>
+      <p>
+	    <span id="trange">t = 0</span>
+
+      </p>
       <!--p>
     <input type="range" min="0" max="13.e9" value="13.e9" step="5.e8" onchange="showValue(this.value)"  />
-    <span id="trange">t = 0</span>
       </p>
       <p>
 	<span id="Vlab">omegaV = 0</span>
@@ -103,8 +106,21 @@
       //document.getElementById("Vlab").innerHTML="omegaV = " + lamrange;
       //document.getElementById("Mlab").innerHTML="omegaM = " + matrange;
       //document.getElementById("Rlab").innerHTML="omegaR = " + radrange;
-      //document.getElementById("trange").innerHTML="t = " + newValue;
+      document.getElementById("trange").innerHTML="t = " + TfromZ(z);
       rChart(lamrange,matrange,radrange)
+      }
+
+      function TfromZ(inpZ)
+      {
+
+      var z = parseFloat(z);
+      var ps = [  2.51144127e-06 , -3.60052368e-05,  -1.47993703e-04,   3.42206826e-03, 7.64732265e-04,  -1.73096664e-01,  -7.09582723e-01,   2.24193048e+01];
+
+      var pest = 0.;
+      for (i = 0; i < 8; i++) {
+		      pest += ps[i]*Math.pow(Math.log(z),7);
+		      }
+      
       }
 
       function Hz(inpZ)
