@@ -121,7 +121,7 @@
       zslider.value = parseFloat(z)
       
       }
-      document.getElementById("zrange").innerHTML="z = " + z;
+      document.getElementById("zrange").innerHTML="z = " + Math.round(z * 100) / 100;
       document.getElementById("trange").innerHTML="t = " + Tval.toExponential(2) + " years";
 
       var h=0.7;
