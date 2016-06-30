@@ -59,11 +59,11 @@
        if(e.style.display == 'block')
 {
           e.style.display = 'none';
-	  t.innerHTML = "[-] What is this?";
+	  t.innerHTML = "[+] What is this?";
  }
       else
 {          e.style.display = 'block';
-	  t.innerHTML = "[+] What is this?";
+	  t.innerHTML = "[-] What is this?";
 }
     }
     //-->
@@ -78,7 +78,7 @@
 	<a href="#" onclick="toggle_visibility();" id="toggleText">[+] What is this?</a>
       </h3>
       
-      <h3 id="myDescription" style="display: block;">
+      <h3 id="myDescription" style="display: none;">
 	Blah Blah
       </h3>
 
