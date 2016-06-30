@@ -84,14 +84,14 @@
       var z = parseFloat(inp)
       var T = TfromZ(z)
       var tslider =  document.getElementById("tInput")
-      tslider.value = T
+      tslider.value = 10e9
       }
       else
       {
       var T = parseFloat(inp)
       var z = ZfromT(T)
       var zslider = document.getElementById("zInput")
-      zslider.value = z
+      zslider.value = 1000
       
       }
       document.getElementById("zrange").innerHTML="z = " + z;
