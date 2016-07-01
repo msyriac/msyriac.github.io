@@ -133,14 +133,15 @@
       var H100 = 3.241e-18;  // 100 km/s/megaparsec in 1/s
       var H0 = h*H100;
       var lamrange = Math.pow(H0/Hz(z),2.)*omegaV0*100.
-      var matrange = Math.pow(H0/Hz(z),2.)*omegaM0*Math.pow(1.+z,3.0)*100.
+      var matrange = Math.pow(H0/Hz(z),2.)*omegaM0*Math.pow(1.+z,3.0)*100.*(5.39/6.39)
+      var matrangeB = Math.pow(H0/Hz(z),2.)*omegaM0*Math.pow(1.+z,3.0)*100.*(1.0/6.39)
       var radrange = Math.pow(H0/Hz(z),2.)*omegaR0*Math.pow(1.+z,4.0)*100.
       
       
       //document.getElementById("Vlab").innerHTML="omegaV = " + lamrange;
       //document.getElementById("Mlab").innerHTML="omegaM = " + matrange;
       //document.getElementById("Rlab").innerHTML="omegaR = " + radrange;
-      rChart(lamrange,matrange,radrange)
+      rChart(lamrange,matrange,matrangeB,radrange)
       }
 
       function TfromZ(inpZ)
@@ -192,7 +193,7 @@
       }
 
 
-      function rChart(V,M,R) {
+      function rChart(V,M,Mb,R) {
       var chart = new CanvasJS.Chart("chartContainer",
       {
       title:{
@@ -220,8 +221,9 @@
       showInLegend: true,
       indexLabel: "#percent%",
       dataPoints: [
-      {  y: parseFloat(V), name: "Vacuum", legendMarkerType: "triangle"},
-      {  y: parseFloat(M), name: "Matter", legendMarkerType: "square"},
+      {  y: parseFloat(V), name: "Dark Energy", legendMarkerType: "triangle"},
+      {  y: parseFloat(M), name: "Dark Matter", legendMarkerType: "square"},
+      {  y: parseFloat(Mb), name: "Ordinary Matter", legendMarkerType: "diamond"},
       {  y: parseFloat(R), name: "Radiation", legendMarkerType: "circle"}
       ]
       }
