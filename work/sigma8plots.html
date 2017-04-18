@@ -1,0 +1,41 @@
+
+<html>
+	<head>
+		<title>Sigma8 from SZ clusters</title>
+		<script src="../multistep2.js"></script>
+		<script>
+			add_step("type", ["j","k"])
+			add_step("step", ["j","k"])
+			add_step("comp", ["c","v"])
+			add_desc("desc", {sel:".type img"})
+			add_desc("desc_cg", {sel:".cg img",format:data_desc})
+			add_desc("desc_messenger", {sel:".messenger img",format:data_desc})
+			set_reset("0")
+		</script>
+		<style>
+			.desc, .desc_cg, .desc_messenger { font-weight: bold; }
+		</style>
+	</head>
+	<body>
+		<h1>Sigma8 from SZ clusters</h1>
+		<p><b>j/k</b> to switch  <b>c/v</b> to switch </p>
+		<p class=desc></p>
+		<div class=type>
+			<div class=comp>
+				<img src=s8S4.png.png>
+				<img src=s8S4mis.png>
+				<img src=s8S4polmis.png>
+			</div>
+			<!-- <div class=comp> -->
+			<!-- 	<img src=map_cg_0500_0.png> -->
+			<!-- 	<img src=map_cg_0500_1.png> -->
+			<!-- 	<img src=map_cg_0500_2.png> -->
+			<!-- </div> -->
+			<!-- <div class=comp> -->
+			<!-- 	<img src=map_diff_0010_0.png> -->
+			<!-- 	<img src=map_diff_0010_1.png> -->
+			<!-- 	<img src=map_diff_0010_2.png> -->
+			<!-- </div> -->
+		</div>
+	</body>
+</html>
