@@ -1,4 +1,7 @@
 1. Add csv files, but don't git store them, sync to your private dropbox
+```
+rsync -avPL *.csv ~/Dropbox/bookmarks/
+```
 2. Run update.py
 3. Run http server in bookmarks/ locally
 ```
