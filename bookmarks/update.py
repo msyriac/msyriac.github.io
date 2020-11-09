@@ -29,7 +29,14 @@ for fname in files:
                 heading,private = line.strip().split(',')
                 continue
             if private=='true':
-                pdiv1 = "<div class='private' style=\"display: none;\">"
+                pdiv1 = """
+                <div class='private'>
+                  <p style="color:#cc2222;">
+                    HIDDEN
+                    </p>
+                  </div>
+                <div class='private' style=\"display: none;\">
+                """
                 pdiv2 = "</div>"
             elif private=='false':
                 pdiv1 = ""
