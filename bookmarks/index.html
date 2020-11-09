@@ -11,13 +11,28 @@
     $(function(){
       $("#grid").load("grid.html"); 
     });
+
+
+      function showPrivate() {
+       	  var xs = document.getElementsByClassName("private");
+	  for (const x of xs){
+          if (x.style.display === "none") {
+       	      x.style.display = "block";
+       	  } else {
+       	      x.style.display = "none";
+       	  }
+	  }
+       }
+      
     </script> 
 
 </head>
 <body>
 
   <h2>Bookmarks</h2>
-
+  <div>
+      <button onclick="showPrivate()">Toggle private</button>
+  </div>
   <div id="grid"></div>
 
 </body>
