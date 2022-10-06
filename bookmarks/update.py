@@ -1,7 +1,7 @@
 import os,sys
 import glob
 
-os.system("rsync -avPL *.csv ~/Dropbox/bookmarks/")
+# os.system("rsync -avPL *.csv ~/Dropbox/bookmarks/")
 files = sorted(glob.glob("*.csv"), key=str.casefold)
 
 mstr = """<div class='grid-container'>$ITEM
