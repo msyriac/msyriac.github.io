@@ -16,8 +16,8 @@ a = np.genfromtxt("pubs.tsv",dtype=str,delimiter='\t',skip_header=1)
 student_star_global = "{\\Large \\bf{\\ccAttribution}}"
 peer_star_global = "\\textcolor{LimeGreen}{{\\Large \\bf{\\Checkedbox}}}~"
 wait_star_global = "\\textcolor{Melon}{{\\faPause}}~"
-hindex = 38
-ncites = 5500
+hindex = 39
+ncites = 6300
 
 output = """
 \\documentclass[11pt,usenames,dvipsnames]{article}
@@ -86,7 +86,7 @@ h-index: """ + str(hindex) + """\\\\""" +str(ncites) + """+ citations\\\\A full 
 """ indicates that it has been accepted in a journal after peer-review.\\\\""" + wait_star_global + \
 """ indicates that it is intended for peer-review but has not been accepted yet. \\\\
 \\\\
-Out of 89 articles, 73 have been submitted for peer-review and 66 have been accepted. \\\\
+Out of 92 articles, 75 have been submitted for peer-review and 66 have been accepted. \\\\
 """
 
 
