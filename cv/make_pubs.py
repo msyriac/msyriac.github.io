@@ -1,5 +1,8 @@
 import numpy as np
 import os,sys
+from datetime import date
+today = date.today()
+d2 = today.strftime("%B %d, %Y")
 
 combined = False
 
@@ -79,16 +82,17 @@ output = """
 
 
 h-index: """ + str(hindex) + """\\\\""" +str(ncites) + """+ citations\\\\A full publication list is available online  at my \\href{https://scholar.google.com/citations?user=CiW7db8AAAAJ&hl=en}{Google Scholar} profile. \\\\
-
+{\\bf Last updated: }
+"""  + d2 + "\\\\" + \
+"""
 {\\bf Legend:} \\\\
 """ + student_star_global + \
 """ indicates that I supervised or co-supervised the corresponding student-led publication.\\\\""" + peer_star_global + \
 """ indicates that it has been accepted in a journal after peer-review.\\\\""" + wait_star_global + \
 """ indicates that it is intended for peer-review but has not been accepted yet. \\\\
 \\\\
-Out of 92 articles, 75 have been submitted for peer-review and 66 have been accepted. \\\\
+Out of 92 articles, 76 have been submitted for peer-review and 66 have been accepted. \\\\
 """
-
 
 if combined:
     headings = [""]
