@@ -20,7 +20,7 @@ student_star_global = "{\\Large \\bf{\\ccAttribution}}"
 peer_star_global = "\\textcolor{LimeGreen}{{\\Large \\bf{\\Checkedbox}}}~"
 wait_star_global = "\\textcolor{Melon}{{\\faPause}}~"
 hindex = 41
-ncites = 6630
+ncites = 6770
 
 output = """
 \\documentclass[11pt,usenames,dvipsnames]{article}
