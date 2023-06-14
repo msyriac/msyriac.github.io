@@ -20,7 +20,7 @@ student_star_global = "{\\Large \\bf{\\ccAttribution}}"
 peer_star_global = "\\textcolor{LimeGreen}{{\\Large \\bf{\\Checkedbox}}}~"
 wait_star_global = "\\textcolor{Melon}{{\\faPause}}~"
 hindex = 41
-ncites = 6770
+ncites = 6920
 
 output = """
 \\documentclass[11pt,usenames,dvipsnames]{article}
@@ -91,7 +91,7 @@ h-index: """ + str(hindex) + """\\\\""" +str(ncites) + """+ citations\\\\A full 
 """ indicates that it has been accepted in a journal after peer-review.\\\\""" + wait_star_global + \
 """ indicates that it is intended for peer-review but has not been accepted yet. \\\\
 \\\\
-Out of 95 articles, 79 have been submitted for peer-review and 68 have been accepted. \\\\
+Out of 95 articles, 79 have been submitted for peer-review and 69 have been accepted. \\\\
 """
 
 if combined:
