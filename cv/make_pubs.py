@@ -20,7 +20,7 @@ student_star_global = "{\\Large \\bf{\\ccAttribution}}"
 peer_star_global = "\\textcolor{LimeGreen}{{\\Large \\bf{\\Checkedbox}}}~"
 wait_star_global = "\\textcolor{Melon}{{\\faPause}}~"
 hindex = 41
-ncites = 7400
+ncites = 7900
 
 output = """
 \\documentclass[11pt,usenames,dvipsnames]{article}
@@ -81,7 +81,7 @@ output = """
 \\maketitle
 
 
-h-index: """ + str(hindex) + """\\\\""" +str(ncites) + """+ citations\\\\A full publication list is available online  at my \\href{https://scholar.google.com/citations?user=CiW7db8AAAAJ&hl=en}{Google Scholar} profile. \\\\
+h-index: """ + str(hindex) + """\\\\""" +str(ncites) + """+ citations\\\\
 {\\bf Last updated: }
 """  + d2 + "\\\\" + \
 """
@@ -91,7 +91,7 @@ h-index: """ + str(hindex) + """\\\\""" +str(ncites) + """+ citations\\\\A full 
 """ indicates that it has been accepted in a journal after peer-review.\\\\""" + wait_star_global + \
 """ indicates that it is intended for peer-review but has not been accepted yet. \\\\
 \\\\
-Out of 100 articles, 81 have been submitted for peer-review and 71 have been accepted. \\\\
+Out of 102 articles, 83 are intended for peer-review and 76 of those have been accepted. \\\\
 """
 
 if combined:
