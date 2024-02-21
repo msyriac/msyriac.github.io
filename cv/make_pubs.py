@@ -4,7 +4,7 @@ from datetime import date
 today = date.today()
 d2 = today.strftime("%B %d, %Y")
 
-combined = False
+combined = True
 
 """
 Symbols from:
@@ -16,7 +16,6 @@ https://en.wikibooks.org/wiki/LaTeX/Colors
 
 
 a = np.genfromtxt("pubs.tsv",dtype=str,delimiter='\t',skip_header=1)
-#student_star_global = "{\\Large \\bf{\\ccAttribution}}"
 student_star_global = "{\\bf{\\faGraduationCap}}"
 peer_star_global = "\\textcolor{LimeGreen}{{\\Large \\bf{\\Checkedbox}}}~"
 wait_star_global = "\\textcolor{Melon}{{\\faPause}}~"
@@ -93,7 +92,7 @@ h-index: """ + str(hindex) + """\\\\""" +str(ncites) + """+ citations\\\\
 """ indicates that it has been accepted in a journal after peer-review.\\\\""" + wait_star_global + \
 """ indicates that it is intended for peer-review but has not been accepted yet. \\\\
 \\\\
-Out of 105 articles, 85 are intended for peer-review and 77 of those have been accepted. \\\\
+Out of 106 articles, 86 are intended for peer-review and 80 of those have been accepted. \\\\
 """
 
 if combined:
