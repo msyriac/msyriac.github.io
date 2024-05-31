@@ -4,7 +4,7 @@ from datetime import date
 today = date.today()
 d2 = today.strftime("%B %d, %Y")
 
-combined = True
+combined = False
 
 """
 Symbols from:
@@ -20,7 +20,7 @@ student_star_global = "{\\bf{\\faGraduationCap}}"
 peer_star_global = "\\textcolor{LimeGreen}{{\\Large \\bf{\\Checkedbox}}}~"
 wait_star_global = "\\textcolor{Melon}{{\\faPause}}~"
 hindex = 45
-ncites = 9300
+ncites = 9700
 
 output = """
 \\documentclass[11pt,usenames,dvipsnames]{article}
@@ -92,7 +92,7 @@ h-index: """ + str(hindex) + """\\\\""" +str(ncites) + """+ citations\\\\
 """ indicates that it has been accepted in a journal after peer-review.\\\\""" + wait_star_global + \
 """ indicates that it is intended for peer-review but has not been accepted yet. \\\\
 \\\\
-Out of 107 articles, 87 are intended for peer-review and 83 of those have been accepted. \\\\
+Out of 109 articles, 89 are intended for peer-review and 83 of those have been accepted. \\\\
 """
 
 if combined:
