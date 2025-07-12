@@ -4,7 +4,17 @@ from datetime import date
 today = date.today()
 d2 = today.strftime("%B %d, %Y")
 
+try:
+    pfile = sys.argv[1].strip()
+except:
+    pfile = None
+
+if (pfile is None) or pfile=='': pfile = "pubs.tsv"
+
 combined = False
+#ptype = 'significant'
+ptype = 'student'
+
 
 """
 Symbols from:
@@ -15,12 +25,18 @@ https://en.wikibooks.org/wiki/LaTeX/Colors
 """
 
 
-a = np.genfromtxt("pubs.tsv",dtype=str,delimiter='\t',skip_header=1)
-student_star_global = "{\\bf{\\faGraduationCap}}"
+a = np.genfromtxt(pfile,dtype=str,delimiter='\t',skip_header=1)
+if ptype=='student':
+    student_star_global = "{\\bf{\\faGraduationCap}}"
+    sstr = "that I supervised or co-supervised the corresponding student-led publication"
+elif ptype=='significant':
+    student_star_global = "{\\bf {\\large *}}"
+    sstr = "a significant publication"
+    
 peer_star_global = "\\textcolor{LimeGreen}{{\\Large \\bf{\\Checkedbox}}}~"
 wait_star_global = "\\textcolor{Melon}{{\\faPause}}~"
-hindex = 48
-ncites = 11200
+hindex = 51
+ncites = 12300
 
 output = """
 \\documentclass[11pt,usenames,dvipsnames]{article}
@@ -88,11 +104,11 @@ h-index: """ + str(hindex) + """\\\\""" +str(ncites) + """+ citations\\\\
 """
 {\\bf Legend:} \\\\
 """ + student_star_global + \
-""" indicates that I supervised or co-supervised the corresponding student-led publication.\\\\""" + peer_star_global + \
+f""" indicates {sstr}.\\\\""" + peer_star_global + \
 """ indicates that it has been accepted in a journal after peer-review.\\\\""" + wait_star_global + \
 """ indicates that it is intended for peer-review but has not been accepted yet. \\\\
 \\\\
-Out of 122 articles, 102 are intended for peer-review and 90 of those have been accepted. \\\\
+Out of 129 articles, 109 are intended for peer-review and 100 of those have been accepted. \\\\
 """
 
 if combined:
@@ -182,7 +198,7 @@ output = output + """
 """
 
 ostr = "_combined" if combined else ""
-ofile = f"Publications{ostr}.tex"
+ofile = f"Publications{ostr}_{ptype}.tex"
 with open(ofile, "w") as text_file:
     text_file.write(output)
 
